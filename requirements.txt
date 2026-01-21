@@ -1,0 +1,7 @@
+qiskit
+qiskit-aer
+numpy
+opencv-python
+matplotlib
+scikit-image
+scipy
