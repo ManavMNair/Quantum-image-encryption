@@ -5,5 +5,5 @@ opencv-python
 matplotlib
 scikit-image
 scipy
-qiskit-visualization
+qiskit[visualization]
 pylatexenc
