@@ -1,12 +1,12 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 *.pyd
 
 # Virtual environments
+.venv/
 venv/
-.env/
+env/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -17,6 +17,7 @@ Thumbs.db
 
 # Qiskit cache
 .qiskit/
+
 
 # Data (optional)
 data/*.jpg
