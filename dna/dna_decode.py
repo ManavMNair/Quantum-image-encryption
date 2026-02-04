@@ -39,17 +39,15 @@ def dna_reverse_substitution(DNi0, DNi1, DNi2, DNi3, ksk):
 
     for i in range(h):
         for j in range(w):
-            for k in range(4):
-                key = int(ksk[k % len(ksk)]) % 4
-
-                if k == 0:
-                    (DNi0[i, j].astype(np.int16) - key) % 4
-                elif k == 1:
-                    (DNi1[i, j].astype(np.int16) - key) % 4
-                elif k == 2:
-                    (DNi2[i, j].astype(np.int16) - key) % 4
-                elif k == 3:
-                    (DNi3[i, j].astype(np.int16) - key) % 4
+            key0 = int(ksk[0 % len(ksk)]) % 4
+            key1 = int(ksk[1 % len(ksk)]) % 4
+            key2 = int(ksk[2 % len(ksk)]) % 4
+            key3 = int(ksk[3 % len(ksk)]) % 4
+            
+            DNi0[i, j] = (DNi0[i, j].astype(np.int16) - key0) % 4
+            DNi1[i, j] = (DNi1[i, j].astype(np.int16) - key1) % 4
+            DNi2[i, j] = (DNi2[i, j].astype(np.int16) - key2) % 4
+            DNi3[i, j] = (DNi3[i, j].astype(np.int16) - key3) % 4
 
     return DNi0, DNi1, DNi2, DNi3
 
